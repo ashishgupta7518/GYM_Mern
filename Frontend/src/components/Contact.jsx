@@ -9,7 +9,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const sendMail = async (e) => {
+  const sendMail = async (e) => {    
     e.preventDefault();
     setLoading(true);
     try {
