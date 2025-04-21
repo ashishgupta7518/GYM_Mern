@@ -8,13 +8,20 @@ const router = express.Router();
 
 config({ path: "./config.env" });
 
+
 app.use(
     cors({
         origin: process.env.FRONTEND_URL,
-        methods: ["POST"],
+        methods: ["POST", "OPTIONS"],
         credentials: true,
+        allowedHeaders: ["Content-Type", "Authorization"]
     })
 );
+app.options(/.*/, cors());
+
+
+
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
