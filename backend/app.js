@@ -10,7 +10,7 @@ config({ path: "./config.env" });
 
 app.use(
     cors({
-        origin: 'https://gym-mern-1.onrender.com/',
+        origin: process.env.FRONTEND_URL,
         methods: ["POST"],
         credentials: true,
     })
