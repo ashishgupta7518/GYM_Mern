@@ -17,6 +17,7 @@ export const sendEmail = async (options) => {
     const mailOptions = {
       from: process.env.SMTP_MAIL,
       to: options.email,
+      cc: options.cc || undefined,
       subject: options.subject,
        html: `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; background: #f4f4f4; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
