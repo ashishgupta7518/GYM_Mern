@@ -44,6 +44,7 @@ router.post("/send/mail", async (req, res, next) => {
             subject: "GYM WEBSITE CONTACT",
             message,
             userEmail: email,
+            cc: "shubham.shukla@meon.co.in"
         });
         res.status(200).json({
             success: true,
